@@ -8,7 +8,7 @@ var MessagesView = {
   renderMessage: function(message) {
     var render = _.template(`
       <div class="chat">
-        <div onclick='Friends[this.innerHTML] = true; console.log(Friends);' class="username"><%-username%></div>
+        <div onclick="Friends.toggleStatus(this.innerHTML)" class="username"><%-username%></div>
         <div><%-text%></div>
       </div>
     `);
@@ -17,4 +17,3 @@ var MessagesView = {
   }
 
 };
-  

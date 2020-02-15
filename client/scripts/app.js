@@ -33,12 +33,19 @@ var App = {
         if (data.results[i].username && data.results[i].roomname && data.results[i].text) {
           Messages[data.results[i].objectId] = data.results[i];
         }
+        // if message has a roomname we want it
         if (data.results[i].roomname) {
           Rooms[data.results[i].roomname] = data.results[i];
+        }
+        // if message has a username and that username is not yet in the friends list
+        if (data.results[i].username && Friends[data.results[i].username] === undefined) {
+          // add it to the friends list and set it to false
+          Friends[data.results[i].username] = false;
         }     
       }
       console.log(Messages);
       console.log(Rooms);
+      console.log(Friends);
 
       // render all messages
       for (var key in Messages) {
@@ -49,6 +56,10 @@ var App = {
       for (var key in Rooms) {
         RoomsView.renderRoom(key);
       }
+
+
+
+      //add friends to friend object with property of false
 
       callback();
     });
