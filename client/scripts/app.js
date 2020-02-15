@@ -32,7 +32,7 @@ var App = {
         }
         // if message has a roomname we want it
         if (data.results[i].roomname) {
-          Rooms[data.results[i].roomname] = data.results[i];
+          Rooms[data.results[i].roomname] = true;
         }
         // if message has a username and that username is not yet in the friends list
         if (data.results[i].username && Friends[data.results[i].username] === undefined) {
@@ -53,7 +53,6 @@ var App = {
       for (var key in Rooms) {
         RoomsView.renderRoom(key);
       }
-
 
       callback();
     });

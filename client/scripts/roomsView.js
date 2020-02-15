@@ -14,15 +14,4 @@ var RoomsView = {
     $('#rooms select').append(render({roomname: roomname}));
   },
 
-  add: function() {
-    var input;
-    input = prompt("Please enter the desired room name:");
-    if (input === null || input === "") {
-      console.log("Prompt cancelled.");
-    } else {
-      this.renderRoom(input);
-      console.log("Added room name " + input);
-    }
-  }
-
 };
