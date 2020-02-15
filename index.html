@@ -28,7 +28,7 @@
       <div id="rooms">
         Room:
         <select></select>
-        <button>Add Room</button>
+        <button onclick="RoomsView.add()">Add Room</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
@@ -46,14 +46,6 @@
     <script src="client/scripts/messageView.js"></script>
     <script src="client/scripts/messagesView.js"></script>
     <script src="client/scripts/app.js"></script>
-
-    <script>
-    //$('.username').click().val();
-    $('.username').click(function(){alert("xxx");});
-    </script>
-
-
-
     <script>
       $(() => App.initialize());
     </script>
