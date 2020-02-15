@@ -12,6 +12,7 @@ var MessagesView = {
         <div><%-text%></div>
       </div>
     `);
+
     
     $('#chats').append(render({username: message.username, text: message.text, roomname: message.roomname}));
   }

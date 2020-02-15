@@ -19,9 +19,6 @@ var App = {
 
 
 
-
-
-
   fetch: function(callback = ()=>{ }) {
     Parse.readAll((data) => {
       // examine the response from the server request:
@@ -57,9 +54,6 @@ var App = {
         RoomsView.renderRoom(key);
       }
 
-
-
-      //add friends to friend object with property of false
 
       callback();
     });
