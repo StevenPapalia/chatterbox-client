@@ -9,6 +9,12 @@ var Rooms = {
       RoomsView.renderRoom(input);
       console.log('Added room name ' + input);
     }
+  },
+
+  isSelected: function() {
+    // trying to determine which room we are in so that I can filter, ran out of time
+    return $('select').children("option:selected").val();
+    // if (Rooms.isSelected() === Messages[key].roomname) { filter messages shown}
   }
 
 };
